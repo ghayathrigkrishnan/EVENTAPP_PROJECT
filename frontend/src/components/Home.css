@@ -1,0 +1,269 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Rajdhani:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #D59D80;
+  --secondary-color: #104C64;
+  --accent-color: #C6C6D0;
+  --highlight-color: #C0754D;
+  --cta-color: #B6410F;
+  --background-color: #0D1D25;
+  --fancy-font: 'Orbitron', sans-serif;
+  --main-bg: linear-gradient(145deg, #0D1D25, #104C64);
+  --glow: 0 0 12px #B6410F, 0 0 24px #C0754D;
+}
+
+/* General body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  background-image: radial-gradient(#163832 1px, transparent 1px);
+  background-size: 30px 30px;
+
+}
+
+/* Starfield */
+.starry-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/stars.svg') repeat;
+  opacity: 0.1;
+  animation: moveStars 60s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveStars {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 1000px; }
+}
+
+/* Home content */
+.home {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--background-color);
+  background-image: radial-gradient(#163832 1px, transparent 1px);
+  background-size: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+  font-family: var(--fancy-font);
+  z-index: 0;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.home-content {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  color: var(--primary-color);
+}
+
+.home-title,
+.home-event {
+  font-family: var(--fancy-font);
+  font-size: 3rem;
+  color: var(--cta-color);
+  text-shadow: var(--glow);
+}
+
+.home-subtitle {
+  font-size: 1.5rem;
+  color: var(--accent-color);
+  margin: 0.5rem 0;
+}
+
+.home-tagline {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin-top: 0.5rem;
+}
+
+/* Card styling */
+.card-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.event-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--highlight-color);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(197, 117, 77, 0.2);
+  backdrop-filter: blur(8px);
+  color: var(--accent-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 30px rgba(213, 157, 128, 0.4);
+}
+
+.event-title {
+  font-family: var(--fancy-font);
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.event-date,
+.event-description {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+}
+
+.read-more-button {
+  background: linear-gradient(90deg, var(--primary-color), var(--cta-color));
+  color: #fff;
+  font-family: var(--fancy-font);
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 0 10px var(--primary-color);
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.read-more-button:hover {
+  background: var(--cta-color);
+  box-shadow: 0 0 20px var(--highlight-color);
+}
+
+/* Hero Section Text Styling */
+/* Home Title */
+.home-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.2rem;
+  text-align: center;
+  color: #FFA366;
+  text-shadow: 0 0 6px #B6410F;
+  animation: fadeInUp 1.5s ease-in-out;
+}
+
+/* Subtitle - “presents” */
+.home-subtitle {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #C6C6D0;
+  letter-spacing: 1px;
+  opacity: 0.85;
+  animation: fadeInUp 2s ease-in-out;
+}
+
+/* Event Title - “RITI 10.0” */
+.home-event {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.8rem;
+  text-align: center;
+  color: #FF774C;
+  text-shadow: 0 0 12px rgba(182, 65, 15, 0.6);
+  font-weight: 700;
+  animation: pulse 3s infinite;
+}
+
+/* Tagline */
+.home-tagline {
+  font-family: 'Rajdhani', sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #DAF1DE;
+  margin-top: 1rem;
+  opacity: 0.9;
+  animation: fadeInUp 2.5s ease-in-out;
+}
+
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 10px #ff3c00, 0 0 20px #ff3c00;
+  }
+  50% {
+    text-shadow: 0 0 30px #ff3c00, 0 0 50px #b6410f;
+  }
+  100% {
+    text-shadow: 0 0 10px #ff3c00, 0 0 20px #ff3c00;
+  }
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 6px #ff3c00; }
+  50% { text-shadow: 0 0 16px #b6410f; }
+  100% { text-shadow: 0 0 6px #ff3c00; }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    text-shadow: 0 0 6px #ff3c00;
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 0 0 18px #ff774c;
+    transform: scale(1.05);
+  }
+  100% {
+    text-shadow: 0 0 6px #ff3c00;
+    transform: scale(1);
+  }
+}
+
+.home-event {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #FF774C;
+  text-shadow: 0 0 6px rgba(255, 80, 40, 0.5);
+  font-weight: 700;
+  animation: pulseGlow 3s ease-in-out infinite;
+}

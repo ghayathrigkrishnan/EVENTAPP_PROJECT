@@ -1,0 +1,112 @@
+/* === Container Box (MUI background override) === */
+.MuiBox-root {
+  background: rgba(0, 255, 255, 0.03) !important;
+  border: 1px solid rgba(0, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  border-radius: 20px !important;
+  box-shadow:
+    0 0 20px rgba(0, 255, 255, 0.06),
+    0 0 60px rgba(0, 255, 255, 0.04),
+    inset 0 0 12px rgba(0, 255, 255, 0.02) !important;
+}
+
+/* === Title Text === */
+.text {
+  color: #C6C6D0 !important;
+  text-shadow: none !important;
+  font-family: 'Orbitron', sans-serif !important;
+  letter-spacing: 0.5px;
+}
+
+/* === Input Fields === */
+.MuiInputBase-root {
+  background: rgba(255, 255, 255, 0.04);
+  color: #C6C6D0;
+  border-radius: 12px;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: inset 0 0 6px rgba(0, 255, 255, 0.05);
+}
+
+.MuiInputLabel-root {
+  color: #8EB69B;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.Mui-focused .MuiInputLabel-root {
+  color: #00f0ff !important;
+}
+
+/* === Button === */
+.btn {
+  background: linear-gradient(to right, #00f0ff, #0066ff) !important;
+  color: #0D1D25 !important;
+  font-family: 'Orbitron', sans-serif !important;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+  border-radius: 12px !important;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+/* === Typography === */
+.MuiTypography-root {
+  font-family: 'Orbitron', sans-serif !important;
+  color: #8EB69B;
+  letter-spacing: 1px;
+}
+
+/* === Divider === */
+.MuiDivider-root {
+  border-color: rgba(0, 255, 255, 0.1);
+}
+
+/* === Table Styles === */
+.MuiTableContainer-root {
+  max-height: 500px; /* Set height so it scrolls if too many rows */
+  overflow-y: auto;
+}
+
+.MuiTable-root {
+  background-color: #1a1a1a !important;
+  border-collapse: separate;
+  border-spacing: 0 4px;
+}
+
+.MuiTableCell-root {
+  color: #C6C6D0 !important;
+  font-family: 'Orbitron', sans-serif !important;
+  padding: 12px 18px !important;
+  font-size: 0.92rem !important;
+}
+
+/* === Table Header Styling Fix === */
+.MuiTableHead-root {
+  background-color: #0D1D25 !important;
+}
+
+.MuiTableHead-root .MuiTableCell-root {
+  color: #8EB69B !important;
+  font-weight: bold !important;
+  background-color: transparent !important;
+  font-size: 0.95rem;
+}
+
+/* === Optional: Custom Scrollbar === */
+.MuiTableContainer-root::-webkit-scrollbar {
+  width: 8px;
+}
+
+.MuiTableContainer-root::-webkit-scrollbar-thumb {
+  background: #00f0ff66;
+  border-radius: 10px;
+}
+
+.MuiTableContainer-root::-webkit-scrollbar-track {
+  background: #0D1D25;
+}
+

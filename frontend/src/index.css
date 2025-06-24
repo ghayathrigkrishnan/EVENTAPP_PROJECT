@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Orbitron:wght@500&display=swap');
+
+:root {
+  --primary-color: #D59D80;
+  --secondary-color: #104C64;
+  --accent-color: #C6C6D0;
+  --highlight-color: #C0754D;
+  --cta-color: #B6410F;
+  --background-color: #0D1D25;
+  --fancy-font: 'Orbitron', sans-serif;
+  --main-bg: linear-gradient(145deg, #0D1D25, #104C64);
+}
+
+
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.navbar {
+  background: linear-gradient(90deg, #0D1D25, #104C64);
+  color: var(--text-color);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #104C64;
+}
+
+.navbar-logo {
+  height: 50px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  cursor: pointer;
+}
+
+.navbar-logo:hover {
+  transform: rotate(8deg) scale(1.05);
+  filter: drop-shadow(0 0 6px var(--accent-color)) brightness(1.2);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.navbar-button {
+  background: none;
+  color: var(--accent-color);
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  font-family: var(--font-fancy);
+}
+
+.navbar-button:hover {
+  border-color: var(--accent-color);
+  background: rgba(213, 157, 128, 0.1);
+}
+
+.reg-container {
+  max-width: 550px;
+  margin: 100px auto;
+  padding: 40px;
+  background: rgba(13, 29, 37, 0.95);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  color: var(--text-color);
+  box-shadow: 0 4px 24px rgba(213, 157, 128, 0.2);
+  border: 1px solid #104C64;
+}
+
+.reg-form input,
+.reg-form select,
+.reg-form button {
+  width: 100%;
+  margin: 15px 0;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+}
+
+.reg-form input,
+.reg-form select {
+  background-color: #104C64;
+  color: var(--text-color);
+}
+
+.reg-form button {
+  background-color: var(--accent-color);
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.reg-form button:hover {
+  background-color: var(--highlight-color);
+  box-shadow: 0 0 10px rgba(213, 157, 128, 0.3);
+}
+
+.card-container {
+  padding: 2rem 1rem;
+}
+
+.event-card {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: var(--card-glow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border: 1px solid #104C64;
+  padding: 0.5rem;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(198, 102, 96, 0.4);
+}
+
+.event-title {
+  font-family: var(--font-fancy);
+  color: var(--accent-color);
+}
+
+.event-date,
+.event-description {
+  color: var(--text-color);
+}
+
+.home-content {
+  text-align: center;
+  padding: 5rem 1rem 3rem;
+  color: var(--primary-color);
+}
+
+.home-title,
+.home-event {
+  font-family: var(--font-fancy);
+  font-size: 2.5rem;
+}
+
+.home-tagline {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+  .navbar-title {
+    font-size: 1.5rem;
+  }
+
+  .navbar-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .home-title,
+  .home-event {
+    font-size: 2rem;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0D1D25;
+  color: var(--accent-color);
+}
+
+.home {
+  position: relative;
+  min-height: 100vh;
+  background: var(--main-bg);
+  color: white;
+  overflow: hidden;
+  padding-bottom: 4rem;
+  z-index: 0;
+  font-family: var(--fancy-font);
+}
+
+.dashboard-button {
+  padding: 10px 20px;
+  margin: 8px 0;
+  font-family: var(--fancy-font);
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(198, 198, 208, 0.3);
+  transition: all 0.3s ease;
+}
+
+.dashboard-button:hover {
+  background-color: var(--highlight-color);
+  color: #fff;
+  box-shadow: 0 0 12px var(--highlight-color);
+}
+
+.dashboard-button.danger {
+  background-color: #B6410F;
+  color: white;
+  border: 1px solid #B6410F;
+}
+
+.dashboard-button.danger:hover {
+  background-color: #C0754D;
+  box-shadow: 0 0 12px rgba(182, 65, 15, 0.5);
+}
+
+.logout-button {
+  padding: 10px 24px;
+  font-family: var(--fancy-font);
+  background-color: var(--cta-color);
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(182, 65, 15, 0.4);
+}
+
+.logout-button:hover {
+  background-color: var(--highlight-color);
+  box-shadow: 0 0 14px var(--highlight-color);
+}
+
+.dashboard-button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
